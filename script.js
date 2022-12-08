@@ -1,29 +1,35 @@
-function showName(){
-    let name= prompt ('Познакомимся,красотка?')
-    alert ('Я не против,меня зовут -'  + name);
+let num1;
+let num2;
+
+let out = document.getElementById('out');
+//сложение
+function showSumm(){
+    num1 = document.getElementById('n1').value;
+    num1 = (num1); 
+    num1 = document.getElementById('n2').value;
+    num2 = parseInt(num2);
+     
+    out.innerHTML = num1 + num2;
 }
-function showSumm()
-{
-    let x= +prompt ('Input first number');
-    let y= +prompt ('Input second number');
-    alert(x+y);
-    }
-function showSubtraction()
-    {
-        let x= +prompt ('Input first number');
-        let y= +prompt ('Input second number');
-        alert(x-y);
-        }
-function showMultiplication()
-        {
-            let x= +prompt ('Input first number');
-            let y= +prompt ('Input second number');
-            alert(x*y);
-            }
-function showSegmentation()
-            {
-                let x= +prompt ('Input first number');
-                let y= +prompt ('Input second number');
-                alert(x/y);
-                }  
-                
+function showSubtraction() {
+    num1 = document.getElementById('n1').value; 
+    num2 = document.getElementById('n2').value;
+
+    out.innerHTML = num1 - num2;
+   }
+   function showMultiplication() {
+    num1 = document.getElementById('n1').value; 
+    num2 = document.getElementById('n2').value;
+
+    out.innerHTML = num1 * num2;
+   }            
+   function showSegmentation() {
+    num1 = document.getElementById('n1').value; 
+    num2 = document.getElementById('n2').value;
+
+    out.innerHTML = num1/num2;
+   }                
+   
+   function select(sender){
+    sender.classList.add("selected");
+   }

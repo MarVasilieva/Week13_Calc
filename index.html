@@ -6,16 +6,61 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
     <title>Calc</title>
+    <style>
+    #summ {
+        border:2px solid red;
+        width: 300px;
+        margin-top: 20px;
+    }
+    .res{
+        width: 400px;
+        height: 100px;
+        border: 1px solid gray;
+    }
+    #fon {
+        margin-top: 10px;
+        width: 400px;
+        height: 200px;
+        text-align: center;
+        border: 1px solid gray;
+        
+    }
+    #textInput {
+        width: 300px;
+        margin-top: 10px;
+    }
+    .selected{
+        background-color: rgb(187, 42, 156);
+        border: 1px solid rebeccapurple;
+        width: 400px;
+        height: 200px;
+        text-align: center;
+    }
+    </style>
 </head>
 <body>
-    <button onclick="showName();">Нажми на меня(нежно)</button>
-    <h1>JavaScript-калькулятор для чайников</h1> 
+
+    <h1>Калькулятор для чайников("улучшенная" версия)</h1> 
+    <form>
+        <p><input type="text" id="n1"></p>
+        <p><input type="text" id="n2"></p>
+
+    </form>
     <div class="button-block">
-        <button onclick="showSumm();">Сложение</button>
-        <button onclick="showSubtraction();">Вычитание</button>
-        <button onclick="showMultiplication();">Умножение</button>
-        <button onclick="showSegmentation();">Деление</button>
+        <button onclick="showSumm()">Сложение</button>
+        <button onclick="showSubtraction()">Вычитание</button>
+        <button onclick="showMultiplication()">Умножение</button>
+        <button onclick="showSegmentation()">Деление</button>
     </div>
+    <hr>
+    <div class="res">
+    <p>Результат вычисления : <span id="out"></span></p>
+    </div>
+     <div id="fon">
+    <div onclick="select(this)">
+        Кликни на меня - цвет поменяется
+    </div>
+</div>
     <script src="./script.js"></script>    
 </body>
 </html>
