@@ -1,35 +1,24 @@
-let num1;
-let num2;
-
+let num1 = document.querySelector('#n1');
+let num2 = document.querySelector('#n2');
 let out = document.getElementById('out');
-//сложение
 function showSumm(){
-    num1 = document.getElementById('n1').value;
-    num1 = (num1); 
-    num1 = document.getElementById('n2').value;
-    num2 = parseInt(num2);
-     
-    out.innerHTML = num1 + num2;
-}
+    let result = Number(num1.value) + Number(num2.value);
+    out.innerHTML = result; }
 function showSubtraction() {
-    num1 = document.getElementById('n1').value; 
-    num2 = document.getElementById('n2').value;
-
-    out.innerHTML = num1 - num2;
-   }
-   function showMultiplication() {
-    num1 = document.getElementById('n1').value; 
-    num2 = document.getElementById('n2').value;
-
-    out.innerHTML = num1 * num2;
-   }            
-   function showSegmentation() {
-    num1 = document.getElementById('n1').value; 
-    num2 = document.getElementById('n2').value;
-
-    out.innerHTML = num1/num2;
-   }                
-   
-   function select(sender){
+   let result = (num1.value) - (num2.value);
+out.innerHTML = result;
+}
+function showMultiplication() {
+    let result = (num1.value) * (num2.value);
+    out.innerHTML = result ; }          
+function showSegmentation() {
+    if (num2.value == 0){
+        alert ('На ноль делить нельзя!');
+    }
+    else
+    result = (num1.value)/(num2.value);
+    out.innerHTML = result ;
+}              
+function select(sender){
     sender.classList.add("selected");
-   }
+}
